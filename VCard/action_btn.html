@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="Style/style.css" rel="stylesheet">
+    
+    
+</head>
+
+<body>
+    <div class="p-3 sm:p-8 grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8">
+        <div class="bg-white shadow-md rounded-md flex-col flex">
+            <h2 class="font-bold text-lg text-gray-700 p-3 "> Main Button </h2>
+            <div class="p-3 flex-grow ">
+                <form action="./Php/action_btn.php" class="flex flex-col">
+                    <div class="mb-4"><label class="text-sm text-gray-600 mb-1 block" for="button_type">Button
+                            Type</label>
+                        <div class="flex items-center gap-3"><button type="button" 
+                                class="  py-1 px-4 rounded focus:outline-none bg-blue-200 text-white-500 btn " onclick="filterSelection('Call')">Call</button><button
+                                type="button"
+                                class="  py-1 px-4 rounded focus:outline-none bg-blue-200 text-white-500 btn" onclick="filterSelection('Mail')">Mail</button><button
+                                type="button"
+                                class="  py-1 px-4 rounded focus:outline-none bg-blue-200 text-white-500 btn " onclick="filterSelection('Link')">Link</button><button
+                                type="button"
+                                class="  py-1 px-4 rounded focus:outline-none bg-blue-200 text-white-500 btn " onclick="filterSelection('Payment')">Payment</button>
+                        </div>
+                    </div>
+                    <div class="mb-4"><label class="text-sm text-gray-600 mb-1 block " for="button_text">Button
+                            Text</label><input name="card_button_text" id="button_action"
+                            class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full"
+                            placeholder="Enter Some Text"></div>
+                    <div class="mb-4 filterDiv Call show"><label class="text-sm text-gray-600 mb-1 block " for="button_action">Mobile
+                            Number</label><input name="card_mobile_number" id="button_action"
+                            class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full"
+                            placeholder="+915454544554"></div>
+                    <div class="mb-4 filterDiv Mail"><label class="text-sm text-gray-600 mb-1 block " for="button_action">Email
+                            </label><input name="card_email" id="button_action"
+                            class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full"
+                            placeholder="Example@email.com"></div>
+                    <div class="mb-4 filterDiv Link"><label class="text-sm text-gray-600 mb-1 block " for="button_action">Website
+                            </label><input name="card_website" id="button_action"
+                            class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full"
+                            placeholder="www.example.com"></div>
+                    <div class="mb-4 filterDiv Payment"><label class="text-sm text-gray-600 mb-1 block " for="button_action">Payment link
+                                </label><input name="button_action" id="button_action"
+                                class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full"
+                                placeholder="Example@pay"></div>
+                    
+                    <div class="pt-3 border-t border-gray-200">
+                        <div class="flex justify-end"><button type="submit"
+                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-md flex-col flex">
+            <div class="p-3">
+                <h2 class="font-bold text-lg text-gray-700">WhatsApp Button</h2>
+                <p class=" text-gray-500 text-sm">Enter your whatsapp number to get more leads on your WhatsApp. Number
+                    must be with country code.</p>
+            </div>
+            <div class="p-3 flex-grow ">
+                <form action="#" class="flex flex-col">
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between"><span class="flex-grow flex flex-col"><span
+                                    class="text-base font-medium text-gray-700" id="headlessui-label-49">Enable WhatsApp
+                                    Button</span></span><button
+                                class="bg-blue-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                id="headlessui-switch-50" role="switch" tabindex="0" aria-checked="true"
+                                aria-labelledby="headlessui-label-49"><span aria-hidden="true"
+                                    class="translate-x-5 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span></button>
+                        </div>
+                    </div>
+                    <div class="mb-4"><label class="text-sm text-gray-600 mb-1 block" for="mobile_number">Your WhatsApp
+                            Number (with country code)</label><input name="mobile_number" id="mobile_number" type="tel"
+                            inputmode="tel"
+                            class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full"
+                            placeholder="+915454544554"></div>
+                    <div class="mb-4"><label class="text-sm text-gray-600 mb-1 block"
+                            for="message">Message</label><textarea name="message" rows="4" id="message"
+                            class="text-white-500 bg-blue-50 p-2 rounded mr-1 flex-grow border-none placeholder-white-400 focus:outline-none w-full">Can someone assist me?</textarea>
+                        <p class="text-xs text-gray-500">You will receive this message when someone clicks whatsapp
+                            button.</p>
+                    </div>
+                    <div class="pt-3 border-t border-gray-200">
+                        <div class="flex justify-end"><button type="submit"
+                                class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./JavaScript/action_btn.js"></script>
+</body>
+
+</html>
